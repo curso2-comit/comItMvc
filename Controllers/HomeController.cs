@@ -50,6 +50,13 @@ namespace comItMvc.Controllers
             return View();
         }
 
+        [HttpPost]
+        public IActionResult EnviarContacto(string nombre, 
+            string mail, string consulta)
+        {
+            return RedirectToAction("Index");
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
